@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     description: "Test description"
 }]
     // this use to be res.send("Hello World!") 
-   res.render('index',{ articles: articles })
+   res.render('articles/index',{ articles: articles })
 })
 
 
