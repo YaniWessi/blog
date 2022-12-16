@@ -15,9 +15,13 @@ app.get('/', (req, res) => {
 
    const articles = [{
        title: "Test Article",
-       createdAt: Date.now(),
+       createdAt: new Date(),
        description: "Test description"
-   }]
+   },{
+    title: "Test Article 2",
+    createdAt: new Date(),
+    description: "Test description"
+}]
     // this use to be res.send("Hello World!") 
    res.render('index',{ articles: articles })
 })
