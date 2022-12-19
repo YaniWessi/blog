@@ -1,10 +1,14 @@
 //first 
 const express = require('express')
+const mongoose = require('mongoose');
 const articleRouter = require('./routes/articles')
 const app = express()
 
 
 
+
+mongoose.set('strictQuery', true);
+mongoose.connect('mongodb://localhost/blog')
 // we will be writing all of or views using ejs
 // view engine is going to convert that ejs code into html 
 app.set('view engine', 'ejs')
